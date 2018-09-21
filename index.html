@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Placeholder Fake API example</title>
+  <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <p><a href="https://github.com/typicode/jsonplaceholder#how-to" target="_blank">jsonplaceholder fake REST API</a></p>
+  <div id="recipe-form" class="container">
+    <div class="row">
+      <div id="blog-posts" class="col-sm-8">
+        <header>Existing blog posts:</header>
+      </div>
+      <div class="col-sm-4 text-center">
+          <h3>Create a new blog post</h3>
+          <form id="add-a-post">
+            <label for="title">Post title:</label>
+            <input type="text" id="title" placeholder="Post title">
+            <br>
+            <br>
+            <label for="post-body">Post body:</label>
+            <textarea id="post-body" cols="40" rows="5" placeholder="Post body"></textarea>
+            <br>
+            <br>
+            <input type="submit" id="submit" value="Create new post" class="btn btn-lg btn-secondary">
+          </form>
+      </div>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
