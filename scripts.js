@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', function(event) {
     blogPost.title = title.value;
     blogPost.body = body.value;
     blogPost.userId = 1;
-    createNewBlogPost(blogPost);
+    createNewBlogPost(blogPost).then(displayMessage);
   });
 });
 
 const createNewBlogPost = async (newPost) => {
   try {
     let response = await fetch('https://jsonplaceholder.typicode.com/posts', { 
-      method: 'POST', 
-      body: JSON.stringify(newPost), 
-      dataType: 'json',
-      headers: {
-        "Content-Type": "application/json"
-      }
+    method: 'POST', 
+    body: JSON.stringify(newPost), 
+    dataType: 'json',
+    headers: {
+      "Content-Type": "application/json"
+    }
   });
   let jsonResponse = await response.json();
   console.log(jsonResponse);
@@ -32,6 +32,10 @@ const createNewBlogPost = async (newPost) => {
     console.log(error);
   }
 }
+
+const displayMessage = () => alert('New blog post added');
+
+
 // @todo: refactor into Class BlogConnector, with methods.
 
 const viewBlogPosts = async () => {
