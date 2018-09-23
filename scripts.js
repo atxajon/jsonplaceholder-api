@@ -26,14 +26,14 @@ const createNewBlogPost = async (newPost) => {
     }
   });
   let jsonResponse = await response.json();
-  console.log(jsonResponse);
   return jsonResponse;
   } catch (error) {
     console.log(error);
   }
 }
 
-const displayMessage = () => alert('New blog post added');
+// data will be the value resolved by the Promise (jsonResponse).
+const displayMessage = data => (data.id) ?  alert('New blog post added') : alert('Something went wrong...');
 
 
 // @todo: refactor into Class BlogConnector, with methods.
